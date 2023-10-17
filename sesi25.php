@@ -13,7 +13,7 @@
     }
 
     // Tugas 2 (Menghitung Tahun Kabisat)
-    $tahun = 1603;
+    $tahun = 2023;
     if ($tahun % 400 == 0) {
         echo "tahun $tahun adalah tahun kabisat <br>";
     }
@@ -25,4 +25,21 @@
     }
 
     //Tugas 3 
+    $nilai = 89;
+    if ($nilai >= 90 and $nilai <= 100){
+        echo "nilai $nilai = A";
+    }
+    else if ($nilai >= 80 and $nilai < 90){
+        echo "nilai $nilai = B";
+    }
+    else if ($nilai >= 70 and $nilai < 80){
+        echo "nilai $nilai = C";
+    }
+    else if ($nilai >= 60 and $nilai < 70){
+        echo "nilai $nilai = D";
+    }
+    else {
+        echo "nilai $nilai = E";
+    }
+
 ?>
