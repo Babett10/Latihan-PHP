@@ -1,15 +1,15 @@
 <?php
 
     // Tugas 1 (output bilangan ganjil / genap)
-    $bilangan = 1222;
-    if ($bilangan % 2 == 0 and $bilangan != 0) {
-        echo "angka : $bilangan = bilangan genap <br>";
+    $angka = 1222;
+    if ($angka % 2 == 0 and $angka != 0) {
+        echo "angka : $angka = bilangan genap <br>";
     }
-    elseif ($bilangan == 0) {
+    elseif ($angka == 0) {
         echo "angka 0";
     }
     else {
-        echo "angka : $bilangan = bilangan ganjil <br>";
+        echo "angka : $angka = bilangan ganjil <br>";
     }
 
     // Tugas 2 (Menghitung Tahun Kabisat)
