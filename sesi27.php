@@ -26,9 +26,20 @@
         <tr>
 
         <?php
-        
-
-
+        $count = 10;
+        for ($i=1; $i <=10 ; $i++) { 
+        ?>
+            <tr>
+                <td><?php echo $i; ?></td>
+                <td>Nama ke <?php echo $i; ?></td>
+                <td>Kelas <?php
+                echo "$count"; $count--;
+                
+                ?>
+                </td>
+            </tr>
+        <?php
+        }
         ?>
 
 
