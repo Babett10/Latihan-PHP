@@ -28,13 +28,20 @@
         <?php
         $count = 10;
         for ($i=1; $i <=10 ; $i++) { 
+            ?>
+            
+        <?php
+        if ($i % 2 == 0) {
+            $color = "white";
+        }else {
+            $color = "#D3D3D3";
+        }
         ?>
-            <tr>
+            <tr style="background-color: <?php echo $color ?>;">
                 <td><?php echo $i; ?></td>
                 <td>Nama ke <?php echo $i; ?></td>
                 <td>Kelas <?php
-                echo "$count"; $count--;
-                
+                echo "$count"; $count--; 
                 ?>
                 </td>
             </tr>
