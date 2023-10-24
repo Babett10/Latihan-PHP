@@ -25,21 +25,21 @@
     }
 
     //Tugas 3 
-    $nilai = 89;
-    if ($nilai >= 90 and $nilai <= 100){
-        echo "nilai $nilai = A";
+    $nilaii = 89;
+    if ($nilaii >= 90 and $nilaii <= 100){
+        echo "nilai $nilaii = A";
     }
-    else if ($nilai >= 80 and $nilai < 90){
-        echo "nilai $nilai = B";
+    else if ($nilaii >= 80 and $nilaii < 90){
+        echo "nilai $nilaii = B";
     }
-    else if ($nilai >= 70 and $nilai < 80){
-        echo "nilai $nilai = C";
+    else if ($nilaii >= 70 and $nilaii < 80){
+        echo "nilai $nilaii = C";
     }
-    else if ($nilai >= 60 and $nilai < 70){
-        echo "nilai $nilai = D";
+    else if ($nilaii >= 60 and $nilaii < 70){
+        echo "nilai $nilaii = D";
     }
     else {
-        echo "nilai $nilai = E";
+        echo "nilai $nilaii = E";
     }
 
 ?>

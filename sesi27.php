@@ -48,10 +48,7 @@
         <?php
         }
         ?>
-
-
     </table>
-    
 </body>
 </html>
 
