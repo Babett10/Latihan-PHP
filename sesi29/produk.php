@@ -21,31 +21,38 @@
                 </table>               
             </div>
     <div class="container-md col-md-12">
-    <h1>Data Pelanggan </h1>
+    <h1>Data Produk </h1>
         <table class="table table-bordered" >
             <thead>
                 <tr>
-                    <th scope="col">Nama</th>
-                    <th scope="col">Jenis Kelamin</th>
-                    <th scope="col">Telepon</th>
-                    <th scope="col">Alamat</th>
+                    <th scope="col">Kode Produk</th>
+                    <th scope="col">Nama Produk</th>
+                    <th scope="col">Harga</th>
+                    <th scope="col">Stok</th>
+                    <th scope="col">Satuan</th>
+                    <th scope="col">Supplier</th>
+                    <!-- <th scope="col">Supplier</th> -->
                 </tr>
             </thead>
             <tbody>
                 <?php
                 //panggil DB
                     include("connection.php");
-                    $query = mysqli_query($connect,"SELECT * FROM `pelanggan` ORDER BY id DESC");
+                    $query = mysqli_query($connect,"SELECT kode_produk,nama_produk,harga,stok,stok,satuan,nama FROM `produk`
+                    INNER JOIN supplier ON produk.supplier_id = supplier.id
+                    ORDER BY produk.id ASC;");
 
                 //cetak jumlah tabel
                 while ($data = mysqli_fetch_array($query)) {
                 ?>
              
                 <tr>
+                    <td><?php echo $data["kode_produk"] ?></td>
+                    <td><?php echo $data["nama_produk"] ?></td>
+                    <td><?php echo $data["harga"] ?></td>
+                    <td><?php echo $data["stok"] ?></td>
+                    <td><?php echo $data["satuan"] ?></td>
                     <td><?php echo $data["nama"] ?></td>
-                    <td><?php echo $data["jenis_kelamin"] ?></td>
-                    <td><?php echo $data["telpon"] ?></td>
-                    <td><?php echo $data["alamat"] ?></td>
                 </tr>
 
                 <?php   

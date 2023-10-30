@@ -21,12 +21,11 @@
                 </table>               
             </div>
     <div class="container-md col-md-12">
-    <h1>Data Pelanggan </h1>
+    <h1>Data Supplier </h1>
         <table class="table table-bordered" >
             <thead>
                 <tr>
                     <th scope="col">Nama</th>
-                    <th scope="col">Jenis Kelamin</th>
                     <th scope="col">Telepon</th>
                     <th scope="col">Alamat</th>
                 </tr>
@@ -35,7 +34,7 @@
                 <?php
                 //panggil DB
                     include("connection.php");
-                    $query = mysqli_query($connect,"SELECT * FROM `pelanggan` ORDER BY id DESC");
+                    $query = mysqli_query($connect,"SELECT * FROM `supplier` ORDER BY id DESC");
 
                 //cetak jumlah tabel
                 while ($data = mysqli_fetch_array($query)) {
@@ -43,7 +42,6 @@
              
                 <tr>
                     <td><?php echo $data["nama"] ?></td>
-                    <td><?php echo $data["jenis_kelamin"] ?></td>
                     <td><?php echo $data["telpon"] ?></td>
                     <td><?php echo $data["alamat"] ?></td>
                 </tr>
