@@ -22,6 +22,7 @@
             </div>
     <div class="container-md col-md-12">
     <h1>Data Produk </h1>
+    <a href="form/tambah_produk.php" style="text-decoration: none;">Tambah Data Produk</a></th>
         <table class="table table-bordered" >
             <thead>
                 <tr>

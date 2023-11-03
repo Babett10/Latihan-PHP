@@ -22,6 +22,7 @@
             </div>
     <div class="container-md col-md-12">
     <h1>Data Supplier </h1>
+    <a href="form/tambah_supplier.php" style="text-decoration: none;">Tambah Data Supplier</a></th>
         <table class="table table-bordered" >
             <thead>
                 <tr>
