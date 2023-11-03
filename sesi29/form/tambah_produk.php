@@ -9,6 +9,12 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 </head>
 <body>
+
+<?php
+    //panggil DB
+    include("../connection.php");
+    $query = mysqli_query($connect,"SELECT * FROM `supplier` ORDER BY id DESC");
+?>
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -66,13 +72,11 @@
                                 </td>
                                 <td>
                                     <div class="input-group mb-3">
-                                        <select class="form-select" name="supplier_id">
-                                            <option selected>Pilih Supplier</option>
-                                            <option value="1">Supplier 1</option>
-                                            <option value="2">Supplier 2</option>
-                                            <option value="3">Supplier 3</option>
-                                            <option value="4">Supplier 4</option>
-                                            <option value="5">PT ABC</option>
+                                        <select class="form-select" name="supplier_id">      
+                                            <?php
+                                                while ($product = mysqli_fetch_array($query)) {?>
+                                                    <option value="<?php echo $product['id']; ?>"> <?php echo $product['nama']; ?></option>
+                                            <?php } ?>
                                         </select>
                                     </div>
                                 </td>
