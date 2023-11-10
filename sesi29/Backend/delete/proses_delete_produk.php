@@ -6,11 +6,11 @@
     $telpon = $_POST['telpon'];
     $alamat = $_POST['alamat'];
 
-    include "../connection.php";
+    include "../../connection.php";
 
-    mysqli_query($connect,"DELETE FROM `pelanggan` WHERE id = '$id';");
+    mysqli_query($connect,"DELETE FROM `produk` WHERE id = '$id';");
 
 
-    header("Location: ../index.php");
+    header("Location: ../../produk.php");
 
 ?>

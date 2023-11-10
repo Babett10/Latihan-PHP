@@ -12,14 +12,14 @@
 
 <?php
     //panggil DB
-    include("../connection.php");
-    $query = mysqli_query($connect,"SELECT * FROM `supplier` ORDER BY id DESC");
+    include("../../connection.php");
+    $query = mysqli_query($connect,"SELECT * FROM `supplier` ORDER BY id ASC");
 ?>
     <div class="container">
         <div class="row">
             <div class="col-md-6">
                 <h3 class="mt-3">Tambah Data Produk</h3>
-                <form action="../backend/proses_produk.php" method="post">
+                <form action="../../backend/tambah/proses_produk.php" method="post">
                     <table class="table">
                             <tr>
                                 <td>

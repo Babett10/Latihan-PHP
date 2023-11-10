@@ -5,11 +5,11 @@
     $telpon = $_POST['telpon'];
     $alamat = $_POST['alamat'];
 
-    include "../connection.php";
+    include "../../connection.php";
 
     mysqli_query($connect,"INSERT INTO `pelanggan`(`nama`, `jenis_kelamin`, `telpon`, `alamat`) VALUES ('$nama','$jenis_kelamin','$telpon','$alamat');");
 
 
-    header("Location: ../index.php");
+    header("Location: ../../index.php");
 
 ?>

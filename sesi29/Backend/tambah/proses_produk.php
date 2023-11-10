@@ -8,11 +8,11 @@
     $supplier_id = $_POST['supplier_id'];
     
 
-    include "../connection.php";
+    include "../../connection.php";
 
     mysqli_query($connect,"INSERT INTO `produk`(`kode_produk`, `nama_produk`, `harga`, `stok`, `satuan`, `supplier_id`) VALUES ('$kode_produk','$nama_produk','$harga','$stok','$satuan','$supplier_id');");
 
 
-    header("Location: ../produk.php");
+    header("Location: ../../produk.php");
 
 ?>

@@ -10,7 +10,7 @@
 
 <!-- query -->
 <?php
-    include("../connection.php");
+    include("../../connection.php");
     $id = $_GET['id'];
 
     $pelanggan = mysqli_query($connect,"SELECT * FROM pelanggan WHERE id = '$id'");
@@ -27,7 +27,7 @@
         <div class="row">
             <div class="col-md-6">
                 <h3 class="mt-3">Edit Data Pelanggan</h3>
-                <form action="../backend/proses_edit_pelanggan.php?id=<?php echo $id?>" method="post">
+                <form action="../../backend/edit/proses_edit_pelanggan.php?id=<?php echo $id?>" method="post">
                     <table class="table">
                             <tr>
                                 <td>
@@ -43,13 +43,27 @@
                                 </td>
                                 <td>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="jenis_kelamin" value="pria" checked="">
+                                    <?php
+                                        if ($jenis_kelamin == "Pria") {
+                                            echo'<input class="form-check-input" type="radio" name="jenis_kelamin" value="Pria" checked="">';
+                                        }
+                                        else {
+                                            echo '<input class="form-check-input" type="radio" name="jenis_kelamin" value="Pria">';
+                                        }
+                                    ?>                                      
                                         <label class="form-check-label">
                                             Pria
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="jenis_kelamin" value="wanita">
+                                    <?php
+                                        if ($jenis_kelamin == "Wanita") {
+                                            echo'<input class="form-check-input" type="radio" name="jenis_kelamin" value="Wanita" checked="">';
+                                        }
+                                        else {
+                                            echo '<input class="form-check-input" type="radio" name="jenis_kelamin" value="Wanita">';
+                                        }
+                                    ?>                                              
                                         <label class="form-check-label">
                                             wanita
                                         </label>
